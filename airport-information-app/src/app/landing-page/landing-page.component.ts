@@ -41,6 +41,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class LandingPageComponent implements OnInit {
   airportInfo: any;
+  quote: string = '';
 
   constructor(
     private matIconRegistry: MatIconRegistry,
@@ -56,14 +57,30 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
     console.log('Hello');
     this.displayAirportInformation('KSFO'); // Replace with desired ICAO code
+    this.displayAirportInformationByFreeText('Orlando'); // Replace with desired ICAO code
   }
+
+  getQuote() {}
 
   displayAirportInformation(icaoCode: string): void {
     console.log('hello 2');
 
-    this.airportService.getAirportInformation(icaoCode).subscribe((data) => {
+    this.airportService
+      .getAirportInformationByICAO(icaoCode)
+      .subscribe((data) => {
+        this.airportInfo = data;
+        console.log('hello 3');
+
+        console.log(this.airportInfo);
+      });
+  }
+
+  displayAirportInformationByFreeText(query: string): void {
+    console.log('hello 5');
+
+    this.airportService.getAirportInformation(query).subscribe((data) => {
       this.airportInfo = data;
-      console.log('hello 3');
+      console.log('hello 6');
 
       console.log(this.airportInfo);
     });

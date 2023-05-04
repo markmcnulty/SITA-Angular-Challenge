@@ -17,6 +17,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AirportDetailsComponent } from './airport-details/airport-details.component';
 import { HeaderComponent } from './header/header.component';
 import { WorldSvgComponent } from './world-svg.component';
+import { AirportService } from './services/airport.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { WorldSvgComponent } from './world-svg.component';
     MatExpansionModule,
     MatTableModule,
   ],
-  providers: [],
+  providers: [AirportService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
