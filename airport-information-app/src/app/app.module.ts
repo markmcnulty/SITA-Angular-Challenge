@@ -1,45 +1,51 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { MatIconModule } from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
-import { AppComponent } from './app.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgModule } from '@angular/core';
+
 import { AirportDetailsComponent } from './airport-details/airport-details.component';
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { WorldSvgComponent } from './world-svg.component';
+
 import { AirportService } from './services/airport.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingPageComponent,
     AirportDetailsComponent,
+    AppComponent,
     HeaderComponent,
+    LandingPageComponent,
     WorldSvgComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    HttpClientModule,
+    BrowserModule,
     FormsModule,
-    MatInputModule,
-    MatCardModule,
+    HttpClientModule,
     MatButtonModule,
-    MatToolbarModule,
+    MatCardModule,
+    MatDividerModule,
     MatExpansionModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
     MatTableModule,
+    MatToolbarModule,
   ],
   providers: [AirportService],
   bootstrap: [AppComponent],
