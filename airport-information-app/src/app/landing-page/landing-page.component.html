@@ -1,7 +1,11 @@
-<img src="assets/world.svg" />
+<svg #svgMap width="1109" height="731"></svg>
+<!-- <button (click)="showCountry(id, color)">Show Country</button> -->
+
 <mat-form-field class="example-full-width">
   <mat-label>Search for any airport...</mat-label>
   <input
+    height="60px"
+    width="1473px"
     type="text"
     matInput
     [(ngModel)]="searchTerm"
@@ -16,15 +20,22 @@
   Search Results
 </p>
 
-<mat-list *ngFor="let post of airportInformation">
-  <mat-list-item>
+<mat-action-list *ngFor="let post of airportInformation">
+  <mat-list-item mat-list-item #airport (click)="colorMap(post.countryCode)">
     <img src="assets/flight-takeoff.svg" />
     <b> {{ post.iata }}</b> {{ post.name }}, {{ post.countryCode }}
-    <span class="spacer"></span>
-    <button mat-button>More Info -></button>
   </mat-list-item>
+  <button
+    type="button"
+    style="float: right"
+    routerLink="/airport"
+    (click)="viewAirport(post.iata)"
+  >
+    More Info
+  </button>
+
   <mat-divider></mat-divider>
-</mat-list>
+</mat-action-list>
 
 <p class="info-text mat-body-1" *ngIf="searchTerm.length == 0">
   No Search results

@@ -7,9 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { DatePipe } from '@angular/common';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -19,9 +23,12 @@ import { AirportDetailsComponent } from './airport-details/airport-details.compo
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { WorldSvgComponent } from './world-svg.component';
 
 import { AirportService } from './services/airport.service';
+import { ShareService } from './services/share.service';
+
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { FlightsComponent } from './flights/flights.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,8 @@ import { AirportService } from './services/airport.service';
     AppComponent,
     HeaderComponent,
     LandingPageComponent,
-    WorldSvgComponent,
+    GoogleMapsComponent,
+    FlightsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -41,13 +49,15 @@ import { AirportService } from './services/airport.service';
     MatCardModule,
     MatDividerModule,
     MatExpansionModule,
+    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
     MatTableModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
   ],
-  providers: [AirportService],
+  providers: [AirportService, ShareService, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

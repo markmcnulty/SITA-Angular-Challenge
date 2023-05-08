@@ -5,3 +5,15 @@ spacer {
 .example-full-width {
   width: 80%;
 }
+
+button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  /*optional*/
+  font-family: "Roboto";
+  /*input has OS specific font-family*/
+  color: #0083fc;
+  text-decoration: underline;
+  cursor: pointer;
+}
