@@ -1,0 +1,12 @@
+{
+  "icao": "EIDW",
+  "iata": "DUB",
+  "name": "Dublin",
+  "shortName": "Dublin",
+  "municipalityName": "Dublin",
+  "location": {
+    "lat": 53.4213,
+    "lon": -6.27007
+  },
+  "countryCode": "IE"
+}

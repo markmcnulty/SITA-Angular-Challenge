@@ -1,19 +1,61 @@
-spacer {
+/* spacer {
   flex: 1 1 auto;
 }
 
-.example-full-width {
-  width: 80%;
-}
+
 
 button {
   background: none !important;
   border: none;
   padding: 0 !important;
-  /*optional*/
   font-family: "Roboto";
-  /*input has OS specific font-family*/
   color: #0083fc;
   text-decoration: underline;
   cursor: pointer;
+}
+*/
+#center-items {
+  display: flex;
+  justify-content: center;
+}
+
+.container-width {
+  width: 95%;
+}
+
+.container-margins {
+  margin-left: 33px;
+}
+
+/* testing raw css for table Information */
+#customers {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  /* border-collapse: collapse; */
+  /* width: 95%; */
+}
+
+#customers td {
+  border-radius: 5px;
+}
+#customers th {
+  /* border: 1px solid #ddd; */
+  /* padding: 8px; */
+}
+
+#customers tr:nth-child(even) {
+  /* background-color: #f2f2f2; */
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+hr {
+  height: 1px;
+  background-color: #eee;
+  border: none;
+}
+hr:hover {
+  visibility: hidden;
 }

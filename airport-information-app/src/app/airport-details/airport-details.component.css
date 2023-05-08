@@ -1,7 +1,55 @@
-mat-grid-tile {
-  background: lightblue;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  /* gap: 10px; */
+}
+
+.grid-item {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 50px;
+  /* background-color: #f2f2f2; */
+}
+
+.item1 {
+  padding-left: 100px;
 }
 
 table {
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
   width: 100%;
+  /* padding: 40px; */
 }
+
+td,
+th {
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  padding: 8px;
+}
+tr {
+  font-size: 14px;
+  color: #646464;
+}
+
+
+#back-button {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  background-color: white;
+  font-family: 'Roboto', Courier, monospace;
+  color: #0083fc;
+  border-style: none;
+  text-decoration: none;
+  margin-top: 40px;
+  /* padding-top: 40px; */
+}
+    
+/* #back-button svg {
+  width: 25px;
+  height: 25px;
+} */

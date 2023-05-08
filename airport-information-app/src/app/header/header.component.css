@@ -13,3 +13,7 @@ a {
 .spacer {
   flex: 1 1 auto;
 }
+
+#header-font {
+  font-size: 60px;
+}

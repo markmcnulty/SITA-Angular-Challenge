@@ -29,6 +29,7 @@ import { ShareService } from './services/share.service';
 
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { FlightsComponent } from './flights/flights.component';
+import { LoadingSvgComponent } from './loading-svg/loading-svg.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FlightsComponent } from './flights/flights.component';
     LandingPageComponent,
     GoogleMapsComponent,
     FlightsComponent,
+    LoadingSvgComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,430 @@
+{
+  "departures": [
+    {
+      "movement": {
+        "airport": {
+          "icao": "EGCC",
+          "iata": "MAN",
+          "name": "Manchester"
+        },
+        "scheduledTimeLocal": "2023-05-08 12:50+01:00",
+        "actualTimeLocal": "2023-05-08 13:05+01:00",
+        "scheduledTimeUtc": "2023-05-08 11:50Z",
+        "actualTimeUtc": "2023-05-08 12:05Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 11:50Z",
+          "local": "2023-05-08 12:50+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:05Z",
+          "local": "2023-05-08 13:05+01:00"
+        },
+        "terminal": "2",
+        "checkInDesk": "29-56",
+        "gate": "407",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "BA 2078",
+      "status": "GateClosed",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "British Airways",
+        "iata": "BA",
+        "icao": "BAW"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "LFPG",
+          "iata": "CDG",
+          "name": "Paris"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:30+01:00",
+        "actualTimeLocal": "2023-05-08 13:30+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:30Z",
+        "actualTimeUtc": "2023-05-08 12:30Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "terminal": "2",
+        "checkInDesk": "29-56",
+        "gate": "409",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AA 8029",
+      "status": "Boarding",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "American",
+        "iata": "AA",
+        "icao": "AAL"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "LSGG",
+          "iata": "GVA",
+          "name": "Geneva"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:15+01:00",
+        "actualTimeLocal": "2023-05-08 13:15+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:15Z",
+        "actualTimeUtc": "2023-05-08 12:15Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:15Z",
+          "local": "2023-05-08 13:15+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:15Z",
+          "local": "2023-05-08 13:15+01:00"
+        },
+        "terminal": "2",
+        "checkInDesk": "29-56",
+        "gate": "335C",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AA 8099",
+      "status": "GateClosed",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "American",
+        "iata": "AA",
+        "icao": "AAL"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "KBOS",
+          "iata": "BOS",
+          "name": "Boston"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:15+01:00",
+        "actualTimeLocal": "2023-05-08 13:15+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:15Z",
+        "actualTimeUtc": "2023-05-08 12:15Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:15Z",
+          "local": "2023-05-08 13:15+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:15Z",
+          "local": "2023-05-08 13:15+01:00"
+        },
+        "terminal": "2",
+        "checkInDesk": "0-12",
+        "gate": "402",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AF 3578",
+      "status": "GateClosed",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "Air France",
+        "iata": "AF",
+        "icao": "AFR"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "KPHL",
+          "iata": "PHL",
+          "name": "Philadelphia"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:55+01:00",
+        "actualTimeLocal": "2023-05-08 13:55+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:55Z",
+        "actualTimeUtc": "2023-05-08 12:55Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:55Z",
+          "local": "2023-05-08 13:55+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:55Z",
+          "local": "2023-05-08 13:55+01:00"
+        },
+        "terminal": "2",
+        "checkInDesk": "21-28",
+        "gate": "426",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AY 4098",
+      "status": "Boarding",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "Finnair",
+        "iata": "AY",
+        "icao": "FIN"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "LFPG",
+          "iata": "CDG",
+          "name": "Paris"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:30+01:00",
+        "actualTimeLocal": "2023-05-08 13:30+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:30Z",
+        "actualTimeUtc": "2023-05-08 12:30Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "terminal": "2",
+        "checkInDesk": "29-56",
+        "gate": "409",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "B6 6826",
+      "status": "Boarding",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "JetBlue Airways",
+        "iata": "B6",
+        "icao": "JBU"
+      }
+    }
+  ],
+  "arrivals": [
+    {
+      "movement": {
+        "airport": {
+          "icao": "KSFO",
+          "iata": "SFO",
+          "name": "San Francisco"
+        },
+        "scheduledTimeLocal": "2023-05-08 11:45+01:00",
+        "actualTimeLocal": "2023-05-08 13:10+01:00",
+        "scheduledTimeUtc": "2023-05-08 10:45Z",
+        "actualTimeUtc": "2023-05-08 12:10Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 10:45Z",
+          "local": "2023-05-08 11:45+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:10Z",
+          "local": "2023-05-08 13:10+01:00"
+        },
+        "terminal": "2",
+        "gate": "401",
+        "baggageBelt": "6",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "BA 6146",
+      "callSign": "EIN60",
+      "status": "Approaching",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "aircraft": {
+        "model": "Airbus A330-300"
+      },
+      "airline": {
+        "name": "British Airways",
+        "iata": "BA",
+        "icao": "BAW"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "KSFO",
+          "iata": "SFO",
+          "name": "San Francisco"
+        },
+        "scheduledTimeLocal": "2023-05-08 11:45+01:00",
+        "actualTimeLocal": "2023-05-08 13:10+01:00",
+        "scheduledTimeUtc": "2023-05-08 10:45Z",
+        "actualTimeUtc": "2023-05-08 12:10Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 10:45Z",
+          "local": "2023-05-08 11:45+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:10Z",
+          "local": "2023-05-08 13:10+01:00"
+        },
+        "terminal": "2",
+        "gate": "401",
+        "baggageBelt": "6",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "EI 60",
+      "callSign": "EIN960",
+      "status": "Approaching",
+      "codeshareStatus": "IsOperator",
+      "isCargo": false,
+      "aircraft": {
+        "reg": "EI-GAJ",
+        "modeS": "4CA7D8",
+        "model": "Airbus A330"
+      },
+      "airline": {
+        "name": "Aer Lingus",
+        "iata": "EI",
+        "icao": "EIN"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "LKPR",
+          "iata": "PRG",
+          "name": "Prague"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:30+01:00",
+        "actualTimeLocal": "2023-05-08 13:30+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:30Z",
+        "actualTimeUtc": "2023-05-08 12:30Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "terminal": "2",
+        "gate": "BUS",
+        "baggageBelt": "5",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AA 8014",
+      "status": "Expected",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "American",
+        "iata": "AA",
+        "icao": "AAL"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "EGLL",
+          "iata": "LHR",
+          "name": "London"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:25+01:00",
+        "actualTimeLocal": "2023-05-08 13:25+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:25Z",
+        "actualTimeUtc": "2023-05-08 12:25Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:25Z",
+          "local": "2023-05-08 13:25+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:25Z",
+          "local": "2023-05-08 13:25+01:00"
+        },
+        "terminal": "2",
+        "gate": "407",
+        "baggageBelt": "3",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AA 8039",
+      "status": "Expected",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "aircraft": {
+        "model": "Airbus A320 NEO"
+      },
+      "airline": {
+        "name": "American",
+        "iata": "AA",
+        "icao": "AAL"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "EGLL",
+          "iata": "LHR",
+          "name": "London"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:25+01:00",
+        "actualTimeLocal": "2023-05-08 13:25+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:25Z",
+        "actualTimeUtc": "2023-05-08 12:25Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:25Z",
+          "local": "2023-05-08 13:25+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:25Z",
+          "local": "2023-05-08 13:25+01:00"
+        },
+        "terminal": "2",
+        "gate": "407",
+        "baggageBelt": "3",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "AC 6909",
+      "status": "Expected",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "aircraft": {
+        "model": "Airbus A320 NEO"
+      },
+      "airline": {
+        "name": "Air Canada",
+        "iata": "AC",
+        "icao": "ACA"
+      }
+    },
+    {
+      "movement": {
+        "airport": {
+          "icao": "LIRF",
+          "iata": "FCO",
+          "name": "Rome"
+        },
+        "scheduledTimeLocal": "2023-05-08 13:30+01:00",
+        "actualTimeLocal": "2023-05-08 13:30+01:00",
+        "scheduledTimeUtc": "2023-05-08 12:30Z",
+        "actualTimeUtc": "2023-05-08 12:30Z",
+        "scheduledTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "revisedTime": {
+          "utc": "2023-05-08 12:30Z",
+          "local": "2023-05-08 13:30+01:00"
+        },
+        "terminal": "2",
+        "gate": "BUS",
+        "baggageBelt": "1",
+        "quality": ["Basic", "Live"]
+      },
+      "number": "B6 6839",
+      "status": "Expected",
+      "codeshareStatus": "IsCodeshared",
+      "isCargo": false,
+      "airline": {
+        "name": "JetBlue Airways",
+        "iata": "B6",
+        "icao": "JBU"
+      }
+    }
+  ]
+}

@@ -1,42 +1,71 @@
-<svg #svgMap width="1109" height="731"></svg>
+<!-- <app-loading-svg *ngIf="isLoading"></app-loading-svg> -->
+
+<div id="center-items">
+  <svg #svgMap width="1109" height="731"></svg>
+</div>
 <!-- <button (click)="showCountry(id, color)">Show Country</button> -->
 
-<mat-form-field class="example-full-width">
-  <mat-label>Search for any airport...</mat-label>
-  <input
-    height="60px"
-    width="1473px"
-    type="text"
-    matInput
-    [(ngModel)]="searchTerm"
-    (input)="onInputChange()"
-  />
-  <mat-icon matPrefix>search</mat-icon>
-</mat-form-field>
+<div id="center-items">
+  <mat-form-field class="container-width">
+    <mat-label>Search for any airport...</mat-label>
+    <input
+      height="60px"
+      width="1473px"
+      type="text"
+      matInput
+      [(ngModel)]="searchTerm"
+      (input)="onInputChange()"
+    />
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+</div>
 
-<hr />
+<app-loading-svg *ngIf="isLoading"></app-loading-svg>
 
-<p class="info-text mat-body-1" *ngIf="airportInformation.length > 0">
-  Search Results
-</p>
+<div *ngIf="!isLoading">
+  <!-- Your main content that will be displayed after the loading SVG -->
+  <hr class="container-width" *ngIf="airportInformation.length > 0" />
+  <div>
+    <p
+      class="container-width container-margins"
+      *ngIf="airportInformation.length > 0"
+    >
+      Search Results
+    </p>
+  </div>
 
-<mat-action-list *ngFor="let post of airportInformation">
-  <mat-list-item mat-list-item #airport (click)="colorMap(post.countryCode)">
-    <img src="assets/flight-takeoff.svg" />
-    <b> {{ post.iata }}</b> {{ post.name }}, {{ post.countryCode }}
-  </mat-list-item>
-  <button
-    type="button"
-    style="float: right"
-    routerLink="/airport"
-    (click)="viewAirport(post.iata)"
+  <table id="customers" class="container-width container-margins">
+    <!-- *ngFor="let airport of airportInfo" -->
+    <!-- fullAirportInfo is dummy data and airportInformation is real time data -->
+
+    <tr
+      *ngFor="let airport of airportInformation"
+      routerLink="/airport"
+      (click)="viewAirport(airport.iata)"
+    >
+      <td>
+        <img src="assets/flight-takeoff.svg" /> <b> {{ airport.iata }}</b>
+        {{ airport.name }}, {{ airport.countryCode }}
+        <hr />
+      </td>
+
+      <!-- <td>{{ airport.name }}</td> -->
+      <!-- <td>{{ airport.countryCode }}</td> -->
+    </tr>
+  </table>
+
+  <!-- <mat-action-list
+    style="margin: unset"
+    *ngFor="let airport of fullAirportInfo"
   >
-    More Info
-  </button>
+    <mat-list-item mat-list-item #airport class="container-width">
+      <img src="assets/flight-takeoff.svg" />
+      <b> {{ airport.iata }}</b> {{ airport.name }}, {{ airport.countryCode }}
+    </mat-list-item>
 
-  <mat-divider></mat-divider>
-</mat-action-list>
 
-<p class="info-text mat-body-1" *ngIf="searchTerm.length == 0">
-  No Search results
-</p>
+    <mat-divider></mat-divider>
+  </mat-action-list> -->
+</div>
+
+<!-- </div> -->

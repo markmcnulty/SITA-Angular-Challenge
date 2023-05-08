@@ -1,0 +1,110 @@
+[
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "name": "Dublin",
+    "shortName": "Dublin",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 53.4213,
+      "lon": -6.27007
+    },
+    "countryCode": "IE"
+  },
+  {
+    "icao": "KDBQ",
+    "iata": "DBQ",
+    "name": "Dubuque, Dubuque Regional",
+    "shortName": "Regional",
+    "municipalityName": "Dubuque",
+    "location": {
+      "lat": 42.402,
+      "lon": -90.7095
+    },
+    "countryCode": "US"
+  },
+  {
+    "icao": "OMDB",
+    "iata": "DXB",
+    "name": "Dubai City, Dubai",
+    "shortName": "Dubai",
+    "municipalityName": "Dubai City",
+    "location": {
+      "lat": 25.252798,
+      "lon": 55.3644
+    },
+    "countryCode": "AE"
+  },
+  {
+    "icao": "KDUJ",
+    "iata": "DUJ",
+    "name": "DuBois, DuBois Regional",
+    "shortName": "Regional",
+    "municipalityName": "DuBois",
+    "location": {
+      "lat": 41.1783,
+      "lon": -78.8987
+    },
+    "countryCode": "US"
+  },
+  {
+    "icao": "LDDU",
+    "iata": "DBV",
+    "name": "Dubrovnik",
+    "shortName": "Dubrovnik",
+    "municipalityName": "Dubrovnik",
+    "location": {
+      "lat": 42.5614,
+      "lon": 18.2682
+    },
+    "countryCode": "HR"
+  },
+  {
+    "icao": "OMDM",
+    "iata": "NHD",
+    "name": "Dubai City, Al Minhad Air Base",
+    "shortName": "Al Minhad Air Base",
+    "municipalityName": "Dubai City",
+    "location": {
+      "lat": 25.0268,
+      "lon": 55.3662
+    },
+    "countryCode": "AE"
+  },
+  {
+    "icao": "YSDU",
+    "iata": "DBO",
+    "name": "Dubbo, Dubbo City Regional",
+    "shortName": "City Regional",
+    "municipalityName": "Dubbo",
+    "location": {
+      "lat": -32.2167,
+      "lon": 148.575
+    },
+    "countryCode": "AU"
+  },
+  {
+    "icao": "KDBN",
+    "iata": "DBN",
+    "name": "Dublin, W H 'Bud' Barron",
+    "shortName": "W H 'Bud' Barron",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 32.5644,
+      "lon": -82.9853
+    },
+    "countryCode": "US"
+  },
+  {
+    "icao": "U41",
+    "iata": "DBS",
+    "name": "DuBois, DuBois Municipal",
+    "shortName": "Municipal",
+    "municipalityName": "DuBois",
+    "location": {
+      "lat": 44.1666,
+      "lon": -112.226
+    },
+    "countryCode": "US"
+  }
+]

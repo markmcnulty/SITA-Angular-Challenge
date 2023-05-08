@@ -13,6 +13,7 @@ import { AirportService } from '../services/airport.service';
 
 import * as d3 from 'd3';
 import { ShareService } from '../services/share.service';
+import fullAirportInfo from '../../assets/full-airport-information.json';
 
 @Component({
   selector: 'app-landing-page',
@@ -28,9 +29,13 @@ export class LandingPageComponent implements AfterViewInit {
   airportInformation: AirportInformation[] = [];
   flights: any[] = [];
 
-  id: string = '';
-  color: string = '';
+  // id: string = '';
+  // color: string = '';
   searchTerm: string = '';
+  // allData: any[] = [];
+
+  isLoading: boolean = false;
+  fullAirportInfo = fullAirportInfo;
 
   constructor(
     private airportService: AirportService,
@@ -50,21 +55,14 @@ export class LandingPageComponent implements AfterViewInit {
     });
   }
 
-  highlightCountry(countryId: string, color: string) {
-    const svg = d3.select(this.svgMap.nativeElement);
-    svg.select(`#${countryId}`).style('fill', color);
-  }
+  showLoadingSvg() {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
 
-  showCountry(id: string, color: string) {
-    this.highlightCountry(id, color);
-  }
-
-  async displayAirports(query: string): Promise<void> {
-    (await this.airportService.getAirportInformation(query)).subscribe(
-      (data) => {
-        this.airportInformation = data.items;
-      }
-    );
+      // Place the code you want to execute after 2 seconds here or call a function
+      this.highlightCountry();
+    }, 2000);
   }
 
   onInputChange(): void {
@@ -74,8 +72,26 @@ export class LandingPageComponent implements AfterViewInit {
     }
   }
 
-  colorMap(countryCode: string) {
-    this.showCountry(countryCode, 'blue');
+  //Get airport information and display it
+  async displayAirports(query: string): Promise<void> {
+    (await this.airportService.getAirportInformation(query)).subscribe(
+      (data) => {
+        this.showLoadingSvg();
+
+        this.airportInformation = data.items;
+        console.log(this.airportInformation);
+      }
+    );
+  }
+
+  highlightCountry() {
+    const color = '#0083fc';
+    const svg = d3.select(this.svgMap.nativeElement);
+
+    this.airportInformation.forEach((element) => {
+      console.log(element.countryCode);
+      svg.select(`#${element.countryCode}`).style('fill', color);
+    });
   }
 
   async getDepartureInfo(iataCode: string): Promise<void> {
@@ -83,12 +99,16 @@ export class LandingPageComponent implements AfterViewInit {
       await this.airportService.getAirportDeparturesAndArrivals(iataCode)
     ).subscribe((data) => {
       this.flights = data;
-      console.log(this.flights);
+      const allData = [this.airportInformation, this.flights];
+      console.log('Mush1:', this.airportInformation);
+
+      console.log('Mush2', this.flights);
     });
   }
 
   viewAirport(iataCode: string) {
-    // this.getDepartureInfo(iataCode);
-    this.shareService.myData = this.getDepartureInfo(iataCode);
+    console.log('Hello', iataCode);
+
+    this.shareService.myData = iataCode;
   }
 }
