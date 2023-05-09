@@ -1,0 +1,169 @@
+[
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "name": "Dublin",
+    "shortName": "Dublin",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 53.4213,
+      "lon": -6.27007
+    },
+    "country": {
+      "name": "Ireland"
+    },
+    "countryCode": "IE",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "KDBQ",
+    "iata": "DBQ",
+    "name": "Dubuque, Dubuque Regional",
+    "shortName": "Regional",
+    "municipalityName": "Dubuque",
+    "location": {
+      "lat": 42.402,
+      "lon": -90.7095
+    },
+    "country": {
+      "name": "United States"
+    },
+    "countryCode": "US",
+    "urls": {
+      "webSite": "https://www.flydbq.com/"
+    }
+  },
+  {
+    "icao": "OMDB",
+    "iata": "DXB",
+    "name": "Dubai City, Dubai",
+    "shortName": "Dubai",
+    "municipalityName": "Dubai City",
+    "location": {
+      "lat": 25.252798,
+      "lon": 55.3644
+    },
+    "country": {
+      "name": "United Arab Emirates"
+    },
+    "countryCode": "AE",
+    "urls": {
+      "webSite": "https://www.dubaiairports.ae/"
+    }
+  },
+  {
+    "icao": "KDUJ",
+    "iata": "DUJ",
+    "name": "DuBois, DuBois Regional",
+    "shortName": "Regional",
+    "municipalityName": "DuBois",
+    "location": {
+      "lat": 41.1783,
+      "lon": -78.8987
+    },
+    "country": {
+      "name": "United States"
+    },
+    "countryCode": "US",
+    "urls": {
+      "webSite": "https://duboisairport.com/"
+    }
+  },
+  {
+    "icao": "LDDU",
+    "iata": "DBV",
+    "name": "Dubrovnik",
+    "shortName": "Dubrovnik",
+    "municipalityName": "Dubrovnik",
+    "location": {
+      "lat": 42.5614,
+      "lon": 18.2682
+    },
+    "country": {
+      "name": "Croatia"
+    },
+    "countryCode": "HR",
+    "urls": {
+      "webSite": "https://www.airport-dubrovnik.hr/"
+    }
+  },
+  {
+    "icao": "OMDM",
+    "iata": "NHD",
+    "name": "Dubai City, Al Minhad Air Base",
+    "shortName": "Al Minhad Air Base",
+    "municipalityName": "Dubai City",
+    "location": {
+      "lat": 25.0268,
+      "lon": 55.3662
+    },
+    "country": {
+      "name": "United Arab Emirates"
+    },
+    "countryCode": "AE",
+    "urls": {
+      "webSite": "https://www.dubaiairports.ae/"
+    }
+  },
+  {
+    "icao": "YSDU",
+    "iata": "DBO",
+    "name": "Dubbo, Dubbo City Regional",
+    "shortName": "City Regional",
+    "municipalityName": "Dubbo",
+    "location": {
+      "lat": -32.2167,
+      "lon": 148.575
+    },
+    "country": {
+      "name": "Australia"
+    },
+    "countryCode": "AU",
+    "urls": {
+      "webSite": "https://www.dubboairport.com.au/"
+    }
+  },
+  {
+    "icao": "KDBN",
+    "iata": "DBN",
+    "name": "Dublin, W H 'Bud' Barron",
+    "shortName": "W H 'Bud' Barron",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 32.5644,
+      "lon": -82.9853
+    },
+    "country": {
+      "name": "United States"
+    },
+    "countryCode": "US",
+    "urls": {
+      "webSite": "http://www.airnav.com/airport/kdbn"
+    }
+  },
+  {
+    "icao": "U41",
+    "iata": "DBS",
+    "name": "DuBois, DuBois Municipal",
+    "shortName": "Municipal",
+    "municipalityName": "DuBois",
+    "location": {
+      "lat": 44.1666,
+      "lon": -112.226
+    },
+    "country": {
+      "name": "United States"
+    },
+    "countryCode": "US",
+    "urls": {
+      "webSite": "http://duboiswyomingairport.com/"
+    }
+  }
+]

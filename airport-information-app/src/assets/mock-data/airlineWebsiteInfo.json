@@ -1,0 +1,282 @@
+[
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "shortName": "Dublin",
+    "fullName": "Dublin",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 53.4213,
+      "lon": -6.27007
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "KDBQ",
+    "iata": "DBQ",
+    "shortName": "Regional",
+    "fullName": "Dubuque, Dubuque Regional",
+    "municipalityName": "Dubuque",
+    "location": {
+      "lat": 42.402,
+      "lon": -90.7095
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "OMDB",
+    "iata": "DXB",
+    "shortName": "Dubai",
+    "fullName": "Dubai",
+    "municipalityName": "Dubai City",
+    "location": {
+      "lat": 25.252798,
+      "lon": 55.3644
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "KDUJ",
+    "iata": "DUJ",
+    "shortName": "Regional",
+    "fullName": "DuBois, DuBois Regional",
+    "municipalityName": "DuBois",
+    "location": {
+      "lat": 41.1783,
+      "lon": -78.8987
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "LDDU",
+    "iata": "DBV",
+    "shortName": "Dubrovnik",
+    "fullName": "Dubrovnik",
+    "municipalityName": "Dubrovnik",
+    "location": {
+      "lat": 42.5614,
+      "lon": 18.2682
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "shortName": "Dublin",
+    "fullName": "Dublin",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 53.4213,
+      "lon": -6.27007
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "shortName": "Dublin",
+    "fullName": "Dublin",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 53.4213,
+      "lon": -6.27007
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  },
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "shortName": "Dublin",
+    "fullName": "Dublin",
+    "municipalityName": "Dublin",
+    "location": {
+      "lat": 53.4213,
+      "lon": -6.27007
+    },
+    "elevation": {
+      "meter": 73.76,
+      "km": 0.07,
+      "mile": 0.05,
+      "nm": 0.04,
+      "feet": 242
+    },
+    "country": {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    "continent": {
+      "code": "EU",
+      "name": "Europe"
+    },
+    "timeZone": "Europe/Dublin",
+    "urls": {
+      "webSite": "http://www.dublinairport.com/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dublin_Airport",
+      "twitter": "http://twitter.com/DublinAirport",
+      "googleMaps": "https://www.google.com/maps/@53.421298,-6.270070,14z",
+      "liveAtc": "http://www.liveatc.net/search/?icao=EIDW",
+      "flightRadar": "https://www.flightradar24.com/53.42,-6.27/14"
+    }
+  }
+]

@@ -56,6 +56,3 @@ hr {
   background-color: #eee;
   border: none;
 }
-hr:hover {
-  visibility: hidden;
-}

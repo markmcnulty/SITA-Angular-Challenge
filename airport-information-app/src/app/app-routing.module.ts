@@ -5,8 +5,11 @@ import { AirportDetailsComponent } from './airport-details/airport-details.compo
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  // { path: 'airport/:iata', component: AirportDetailsComponent },
   { path: 'airport', component: AirportDetailsComponent },
+
+  { path: '**', redirectTo: 'landing', pathMatch: 'full' },
+
+  // { path: './', redirectTo: '', pathMatch: 'full' }, // Catch-all wildcard route
 ];
 
 @NgModule({

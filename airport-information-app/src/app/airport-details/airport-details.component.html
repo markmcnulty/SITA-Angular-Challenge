@@ -1,31 +1,25 @@
-<p>Data from landing Component is {{ shareService.myData }}</p>
-<p>realtime info {{ realtimeInfo }}</p>
 <a id="back-button" routerLink="/"><img src="assets/arrow-left.svg" /> Back</a>
-
-<!-- <button type="button" routerLink="/" id="back-button">
-
-  <img src="assets/arrow-left.svg" /> Back
-</button>
-
-<a mat-button routerLink="/" routerLinkActive="mat-accent">
-  <img src="assets/arrow-left.svg" /> Back
-</a> -->
 
 <div class="grid-container">
   <div class="grid-item item1"><app-google-maps></app-google-maps></div>
   <div class="grid-item item2">
     <div>
-      <span>{{ airportInfo.iata }}</span>
-
-      <a style="float: right" [href]="airlineWebsiteInfo.urls.webSite">
-        {{ airlineWebsiteInfo.fullName }} airport.com
+      <span class="title">{{ dummyData.iata }}</span>
+      <a
+        class="website"
+        style="float: right"
+        [href]="dummyData.urls.webSite"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ dummyData.shortName }} airport.com
       </a>
     </div>
-    <label>{{ airportInfo.municipalityName }} Airport</label>
-    <span>Country {{ airportInfo.countryCode }}</span>
-    <span>Country {{ airportInfo.location.lon }}</span>
+    <span class="header-data">{{ dummyData.municipalityName }} Airport</span>
+    <span class="header-data">Country {{ dummyData.country.name }}</span>
     <span>
-      {{ airportInfo.location.lon }}, {{ airportInfo.location.lat }}
+      {{ dummyData.location.lon }},
+      {{ dummyData.location.lat }}
     </span>
 
     <hr />
@@ -37,7 +31,7 @@
 
     <br />
 
-    <h4>Departures</h4>
+    Departures
     <table>
       <thead></thead>
       <tbody>
@@ -48,7 +42,7 @@
         </tr>
       </tbody>
     </table>
-    <h4>Arrivals</h4>
+    Arrivals
     <table>
       <!-- <thead></thead> -->
       <tbody>

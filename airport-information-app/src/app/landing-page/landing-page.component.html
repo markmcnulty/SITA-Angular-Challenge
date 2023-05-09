@@ -22,7 +22,7 @@
 
 <app-loading-svg *ngIf="isLoading"></app-loading-svg>
 
-<div *ngIf="!isLoading">
+<div *ngIf="!isLoading && retreivedItems">
   <!-- Your main content that will be displayed after the loading SVG -->
   <hr class="container-width" *ngIf="airportInformation.length > 0" />
   <div>
@@ -39,7 +39,7 @@
     <!-- fullAirportInfo is dummy data and airportInformation is real time data -->
 
     <tr
-      *ngFor="let airport of airportInformation"
+      *ngFor="let airport of dummyAirportInformation"
       routerLink="/airport"
       (click)="viewAirport(airport.iata)"
     >
@@ -48,24 +48,8 @@
         {{ airport.name }}, {{ airport.countryCode }}
         <hr />
       </td>
-
-      <!-- <td>{{ airport.name }}</td> -->
-      <!-- <td>{{ airport.countryCode }}</td> -->
     </tr>
   </table>
-
-  <!-- <mat-action-list
-    style="margin: unset"
-    *ngFor="let airport of fullAirportInfo"
-  >
-    <mat-list-item mat-list-item #airport class="container-width">
-      <img src="assets/flight-takeoff.svg" />
-      <b> {{ airport.iata }}</b> {{ airport.name }}, {{ airport.countryCode }}
-    </mat-list-item>
-
-
-    <mat-divider></mat-divider>
-  </mat-action-list> -->
 </div>
 
 <!-- </div> -->

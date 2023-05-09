@@ -8,48 +8,83 @@
 .grid-item {
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  padding: 50px;
+  /* border: 1px solid #ccc; */
+  /* padding: 50px; */
   /* background-color: #f2f2f2; */
 }
 
 .item1 {
-  padding-left: 100px;
+  width: 899px;
+  height: 593px;
+  /* max-width: 899px;
+  max-height: 593px; */
+}
+
+.item2 {
+  display: grid;
+  font-family: "Roboto", sans-serif;
+  padding-right: 40px;
+  padding-left: 10px;
+
+  /* width: 899px;
+  max-width: 899px; */
+  /* max-height: 593px; */
 }
 
 table {
   font-family: "Roboto", sans-serif;
   border-collapse: collapse;
   width: 100%;
+  max-height: 593px;
+  table-layout: fixed;
+  width: 100%;
   /* padding: 40px; */
+}
+.title {
+  font-weight: bold;
+  font-size: 28px;
+}
+.website {
+  color: #0083fc;
+  font-size: 20px;
+  float: right;
+}
+
+.header-data {
+  color: #646464;
+  font-size: 20px;
+  float: right;
 }
 
 td,
 th {
   /* border: 1px solid #dddddd; */
   text-align: left;
-  padding: 8px;
+  padding-bottom: 8px;
 }
 tr {
   font-size: 14px;
   color: #646464;
 }
 
-
 #back-button {
   width: 100px;
   height: 50px;
   font-size: 20px;
   background-color: white;
-  font-family: 'Roboto', Courier, monospace;
+  font-family: "Roboto", Courier, monospace;
   color: #0083fc;
   border-style: none;
   text-decoration: none;
   margin-top: 40px;
   /* padding-top: 40px; */
 }
-    
-/* #back-button svg {
-  width: 25px;
-  height: 25px;
-} */
+
+.airportInfo {
+  display: grid;
+}
+hr {
+  height: 1px;
+  background-color: #eee;
+  border: none;
+}
