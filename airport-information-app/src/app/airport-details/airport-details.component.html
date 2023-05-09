@@ -16,8 +16,8 @@
       </a>
     </div>
     <span class="header-data">{{ dummyData.municipalityName }} Airport</span>
-    <span class="header-data">Country {{ dummyData.country.name }}</span>
-    <span>
+    <span class="header-data">Country, {{ dummyData.country.name }}</span>
+    <span class="header-data">
       {{ dummyData.location.lon }},
       {{ dummyData.location.lat }}
     </span>
@@ -25,29 +25,29 @@
     <hr />
 
     <div>
-      <span>Flights</span>
+      <span class="heading">Flights</span>
       <span style="float: right">time</span>
     </div>
 
     <br />
 
-    Departures
+    <span class="flights">Departures</span>
     <table>
       <thead></thead>
       <tbody>
         <tr *ngFor="let item of departures">
-          <td>{{ item.movement.scheduledTimeLocal }}</td>
+          <td>{{ item.movement.scheduledTimeLocal | date : "HH:mm" }}</td>
           <td>{{ item.number }}</td>
           <td style="text-align: right">{{ item.status }}</td>
         </tr>
       </tbody>
     </table>
-    Arrivals
+    <span class="flights">Arrivals</span>
+
     <table>
-      <!-- <thead></thead> -->
       <tbody>
         <tr *ngFor="let item of arrivals">
-          <td>{{ item.movement.scheduledTimeLocal }}</td>
+          <td>{{ item.movement.scheduledTimeLocal | date : "HH:mm" }}</td>
           <td>{{ item.number }}</td>
           <td style="text-align: right">{{ item.status }}</td>
         </tr>

@@ -9,28 +9,10 @@ import {
 
 import { AirportService } from '../services/airport.service';
 import { ShareService } from '../services/share.service';
-import { AirportDepartureInformation } from '../models/airport-departure-info.model';
-// import departures from '../../assets/departures';
-
-import { GoogleMapsComponent } from '../google-maps/google-maps.component';
 import flightInformation from '../../assets/mock-data/departures.json';
 import airportInformation from '../../assets/mock-data/full-airport-information.json';
 
-import airlineWebsiteInfo from '../../assets/mock-data/airlineWebsiteInfo.json';
-// import { SvgMapComponent } from '../svg-map/svg-map.component';
-// export interface Tile {
-//   color: string;
-//   cols: number;
-//   rows: number;
-//   id: number;
-// }
-
-// export interface ActualPeriodicElement {
-//   position: number;
-//   time: string;
-//   number: string;
-//   status: string;
-// }
+// import airlineWebsiteInfo from '../../assets/mock-data/airlineWebsiteInfo.json';
 
 @Component({
   selector: 'app-airport-details',
@@ -41,8 +23,8 @@ export class AirportDetailsComponent implements OnInit {
   departures = flightInformation.departures;
   arrivals = flightInformation.arrivals;
   dummyAirportInformation = airportInformation;
-  airlineWebsiteInfo = airlineWebsiteInfo;
-  realtimeInfo: any[] = [];
+  // airlineWebsiteInfo = airlineWebsiteInfo;
+  // realtimeInfo: any[] = [];
   dummyData: any;
 
   constructor(
@@ -53,6 +35,9 @@ export class AirportDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Here I was getting the iataCode passed by the landing component and rendering data
+    // Due to limited API access I made an alternative to use static dummy code
+
     // this.airportService
     //   .getAirportInformationByIATA(this.shareService.sharedIataCode)
     //   .subscribe((data) => {
@@ -62,7 +47,5 @@ export class AirportDetailsComponent implements OnInit {
     this.dummyData = this.dummyAirportInformation.find(
       (dd: any) => dd.iata === this.shareService.sharedIataCode
     );
-
-    console.log(this.dummyData);
   }
 }

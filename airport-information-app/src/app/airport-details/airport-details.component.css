@@ -1,23 +1,16 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr; */
-  /* gap: 10px; */
 }
 
 .grid-item {
   justify-content: center;
   align-items: center;
-  /* border: 1px solid #ccc; */
-  /* padding: 50px; */
-  /* background-color: #f2f2f2; */
 }
 
 .item1 {
   width: 899px;
   height: 593px;
-  /* max-width: 899px;
-  max-height: 593px; */
 }
 
 .item2 {
@@ -25,10 +18,6 @@
   font-family: "Roboto", sans-serif;
   padding-right: 40px;
   padding-left: 10px;
-
-  /* width: 899px;
-  max-width: 899px; */
-  /* max-height: 593px; */
 }
 
 table {
@@ -38,7 +27,6 @@ table {
   max-height: 593px;
   table-layout: fixed;
   width: 100%;
-  /* padding: 40px; */
 }
 .title {
   font-weight: bold;
@@ -58,7 +46,6 @@ table {
 
 td,
 th {
-  /* border: 1px solid #dddddd; */
   text-align: left;
   padding-bottom: 8px;
 }
@@ -77,12 +64,21 @@ tr {
   border-style: none;
   text-decoration: none;
   margin-top: 40px;
-  /* padding-top: 40px; */
 }
 
 .airportInfo {
   display: grid;
 }
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.flights {
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+
 hr {
   height: 1px;
   background-color: #eee;
