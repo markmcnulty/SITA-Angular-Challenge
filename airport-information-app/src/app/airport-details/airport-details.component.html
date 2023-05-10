@@ -1,7 +1,73 @@
 <a id="back-button" routerLink="/"><img src="assets/arrow-left.svg" /> Back</a>
-
 <div class="grid-container">
-  <div class="item1"><app-google-maps></app-google-maps></div>
+  <div class="item1">
+    <div id="map" style="width: 100%; height: 100%"></div>
+  </div>
+  <div class="item2">
+    <div>
+      <span class="title">{{ airportInformation.data.iata }}</span>
+      <a
+        class="website"
+        style="float: right"
+        [href]="airportInformation.data.urls.webSite"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ airportInformation.data.shortName }} airport.com
+      </a>
+    </div>
+    <span class="header-data"
+      >{{ airportInformation.data.municipalityName }} Airport</span
+    >
+    <span class="header-data"
+      >Country, {{ airportInformation.data.country.name }}</span
+    >
+    <span class="header-data">
+      {{ airportInformation.data.location.lon }},
+      {{ airportInformation.data.location.lat }}
+    </span>
+
+    <hr />
+
+    <div>
+      <span class="heading">Flights</span>
+      <span style="float: right"
+        >{{ currentTime | date : "HH:mm" }} {{ currentTime | date : "z" }}</span
+      >
+    </div>
+
+    <br />
+
+    <span class="flights">Departures</span>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr *ngFor="let item of departures">
+          <td>{{ item.movement.scheduledTimeLocal | date : "HH:mm" }}</td>
+          <td style="text-align: center">{{ item.number }}</td>
+          <td style="text-align: right">{{ item.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <span class="flights">Arrivals</span>
+
+    <table>
+      <tbody>
+        <tr *ngFor="let item of arrivals">
+          <td>{{ item.movement.scheduledTimeLocal | date : "HH:mm" }}</td>
+          <td style="text-align: center">{{ item.number }}</td>
+          <td style="text-align: right">{{ item.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- -------------------------------------------- Use  below for dummy data ----------------------------------------  -->
+<!-- <a id="back-button" routerLink="/"><img src="assets/arrow-left.svg" /> Back</a>
+{{ shareService.iataCode }}
+<div class="grid-container">
+  <div class="item1"><div id="map" style="width: 100%; height: 100%"></div></div>
   <div class="item2">
     <div>
       <span class="title">{{ dummyData.iata }}</span>
@@ -56,4 +122,4 @@
       </tbody>
     </table>
   </div>
-</div>
+</div> -->

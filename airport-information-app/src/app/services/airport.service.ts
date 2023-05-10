@@ -10,39 +10,27 @@ export class AirportService {
   constructor(private http: HttpClient, private datePipe: DatePipe) {}
 
   private readonly rapidapiHost = 'aerodatabox.p.rapidapi.com';
-  private readonly rapidapiKey =
-    ' b941164aeamshb3bc37286f9af0bp10053fjsn087d9d12dc4c';
-  // 'https://aerodatabox.p.rapidapi.com/flights/airports/iata/DUB/2023-04-04T20:00/2023-04-05T08:00'
-  private readonly departuresAndArrivalsApiUrl =
-    // 'https://aerodatabox.p.rapidapi.com/flights/airports/iata/{iata}/2023-04-04T20:00/2023-04-05T08:00';
-    'https://aerodatabox.p.rapidapi.com/flights/airports/iata/{iataCode}/2023-04-04T20:00/2023-04-05T08:00';
-  private readonly getAirportInformationBySearchApiUrl =
-    'https://aerodatabox.p.rapidapi.com/airports/search/term?q=';
-
-  private readonly getAirportByCodeApiUrl =
-    'https://aerodatabox.p.rapidapi.com/airports/iata/{iataCode}';
+  private readonly rapidapiKey = 'ENTER-YOUR-RAPID-API-KEY-HERE';
 
   //fetch a list of airports based on search input
-  async getAirportInformation(query: string): Promise<Observable<any>> {
+  getAirportInformation(query: string): Observable<any> {
     const headers = new HttpHeaders()
       .set('X-RapidAPI-Host', this.rapidapiHost)
       .set('X-RapidAPI-Key', this.rapidapiKey);
 
-    return await this.http.get(
-      this.getAirportInformationBySearchApiUrl + query,
+    return this.http.get(
+      `https://aerodatabox.p.rapidapi.com/airports/search/term?q=${query}`,
       {
         headers,
       }
     );
   }
 
-  // //Fetch airport details by IATA code
+  // Fetch airport details by IATA code
   getAirportInformationByIATA(iataCode: string): Observable<any> {
     const headers = new HttpHeaders()
       .set('X-RapidAPI-Host', this.rapidapiHost)
       .set('X-RapidAPI-Key', this.rapidapiKey);
-
-    // return this.http.get(this.apiUrl + iataCode, { headers });
 
     return this.http.get(
       `https://aerodatabox.p.rapidapi.com/airports/iata/${iataCode}`,
@@ -59,7 +47,6 @@ export class AirportService {
     const headers = new HttpHeaders()
       .set('X-RapidAPI-Host', this.rapidapiHost)
       .set('X-RapidAPI-Key', this.rapidapiKey);
-    console.log('airport Service', iataCode);
 
     return this.http.get(
       `https://aerodatabox.p.rapidapi.com/flights/airports/iata/${iataCode}/${dateNow}/${futureDate}`,

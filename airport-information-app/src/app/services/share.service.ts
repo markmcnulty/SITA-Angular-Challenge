@@ -6,6 +6,5 @@ import { Injectable } from '@angular/core';
 export class ShareService {
   constructor() {}
 
-  public sharedIataCode: any = 'DUB';
-  public status: boolean = false;
+  public iataCode: any = 'DUB';
 }

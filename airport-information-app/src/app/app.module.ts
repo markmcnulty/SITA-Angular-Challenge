@@ -27,7 +27,6 @@ import { AirportSearchComponent } from './airport-search/airport-search.componen
 import { AirportService } from './services/airport.service';
 import { ShareService } from './services/share.service';
 
-import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { FlightsComponent } from './flights/flights.component';
 import { LoadingSvgComponent } from './loading-svg/loading-svg.component';
 import { SafePipe } from 'src/safe.pipe';
@@ -38,7 +37,6 @@ import { SafePipe } from 'src/safe.pipe';
     AppComponent,
     HeaderComponent,
     AirportSearchComponent,
-    GoogleMapsComponent,
     FlightsComponent,
     LoadingSvgComponent,
     SafePipe,

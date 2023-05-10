@@ -32,7 +32,7 @@ export class AirportSearchComponent implements AfterViewInit {
   searchTerm: string = '';
 
   isLoading: boolean = false;
-  retreivedItems: boolean = false;
+  // retreivedItems: boolean = false;
 
   dummyAirportInformation = airportInformation;
 
@@ -58,7 +58,7 @@ export class AirportSearchComponent implements AfterViewInit {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-      this.retreivedItems = true;
+      // this.retreivedItems = true;
       // Place the code you want to execute after 2 seconds here or call a function
       this.highlightCountry();
     }, 2000);
@@ -74,14 +74,12 @@ export class AirportSearchComponent implements AfterViewInit {
 
   //Get airport information and display it
   // Comment out as using dummy departure data moving forward
-  async displayAirports(query: string): Promise<void> {
-    (await this.airportService.getAirportInformation(query)).subscribe(
-      (data) => {
-        this.showLoadingSvg();
+  displayAirports(query: string) {
+    this.airportService.getAirportInformation(query).subscribe((data) => {
+      this.showLoadingSvg();
 
-        this.airportInformation = data.items;
-      }
-    );
+      this.airportInformation = data.items;
+    });
   }
 
   // highlight countries shown on the dropdown search list
@@ -95,19 +93,18 @@ export class AirportSearchComponent implements AfterViewInit {
     });
   }
 
-  // Comment out as using dummy departure data moving forward
-  // async getDepartureInfo(iataCode: string): Promise<void> {
-  //   (
-  //     await this.airportService.getAirportDeparturesAndArrivals(iataCode)
-  //   ).subscribe((data) => {
-  //     this.flights = data;
-  //   });
-  // }
+  getAirportSelectedData() {
+    return this.airportService
+      .getAirportInformationByIATA(this.shareService.iataCode)
+      .subscribe((data) => {
+        return data;
+      });
+  }
 
   // Passing this data to view 2 so that the map will load depending on the iata code
   // I was using this iata code to determine the full view 2 layout
   // I was capturing the iata code depending on which airport the user clicked from the search results
   viewAirport(iataCode: string) {
-    this.shareService.sharedIataCode = iataCode;
+    this.shareService.iataCode = iataCode;
   }
 }
