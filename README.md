@@ -9,6 +9,12 @@ Before running this application, ensure that you have the following installed:
 - Node.js
 - Angular CLI
 
+You will need an rapidAPI key to pull the data from API. Replace the below code in the `airport-service.ts` file.
+- `private readonly rapidapiKey ='ENTER-YOUR-RAPID-API-KEY-HERE';`
+
+You will need an googleMapsAPI key to pull the data from API. Replace the below code in the `index.ts` file.
+- `<script src="https://maps.googleapis.com/maps/api/js?key=ENTER-YOUR-GOOGLE_MAPS-API-KEY-HERE"></script>`
+
 ## Installation
 
 Clone the repository to your local machine: `git clone https://github.com/markmcnulty/SITA-Angular-Challenge.git`
