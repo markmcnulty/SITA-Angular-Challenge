@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DatePipe } from '@angular/common';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -18,12 +20,19 @@ export class AirportService {
       .set('X-RapidAPI-Host', this.rapidapiHost)
       .set('X-RapidAPI-Key', this.rapidapiKey);
 
-    return this.http.get(
-      `https://aerodatabox.p.rapidapi.com/airports/search/term?q=${query}`,
-      {
-        headers,
-      }
-    );
+    return this.http
+      .get(
+        `https://aerodatabox.p.rapidapi.com/airports/search/term?q=${query}`,
+        {
+          headers,
+        }
+      )
+      .pipe(
+        catchError((error) => {
+          console.error('getAirportInformation API Error', error);
+          return throwError(() => 'Something went wrong, check error message.');
+        })
+      );
   }
 
   // Fetch airport details by IATA code
@@ -32,10 +41,16 @@ export class AirportService {
       .set('X-RapidAPI-Host', this.rapidapiHost)
       .set('X-RapidAPI-Key', this.rapidapiKey);
 
-    return this.http.get(
-      `https://aerodatabox.p.rapidapi.com/airports/iata/${iataCode}`,
-      { headers }
-    );
+    return this.http
+      .get(`https://aerodatabox.p.rapidapi.com/airports/iata/${iataCode}`, {
+        headers,
+      })
+      .pipe(
+        catchError((error) => {
+          console.error('getAirportInformationByIATA API Error', error);
+          return throwError(() => 'Something went wrong, check error message.');
+        })
+      );
   }
 
   // //Fetch the next 6 departures and arrivals
@@ -48,9 +63,16 @@ export class AirportService {
       .set('X-RapidAPI-Host', this.rapidapiHost)
       .set('X-RapidAPI-Key', this.rapidapiKey);
 
-    return this.http.get(
-      `https://aerodatabox.p.rapidapi.com/flights/airports/iata/${iataCode}/${dateNow}/${futureDate}`,
-      { headers }
-    );
+    return this.http
+      .get(
+        `https://aerodatabox.p.rapidapi.com/flights/airports/iata/${iataCode}/${dateNow}/${futureDate}`,
+        { headers }
+      )
+      .pipe(
+        catchError((error) => {
+          console.error('getAirportDeparturesAndArrivals API Error', error);
+          return throwError(() => 'Something went wrong, check error message.');
+        })
+      );
   }
 }
