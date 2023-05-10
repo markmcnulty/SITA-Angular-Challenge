@@ -1,15 +1,21 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60% 40%;
 }
 
-.grid-item {
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
 
 .item1 {
-  width: 899px;
   height: 593px;
 }
 

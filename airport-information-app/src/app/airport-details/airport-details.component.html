@@ -1,8 +1,8 @@
 <a id="back-button" routerLink="/"><img src="assets/arrow-left.svg" /> Back</a>
 
 <div class="grid-container">
-  <div class="grid-item item1"><app-google-maps></app-google-maps></div>
-  <div class="grid-item item2">
+  <div class="item1"><app-google-maps></app-google-maps></div>
+  <div class="item2">
     <div>
       <span class="title">{{ dummyData.iata }}</span>
       <a
@@ -26,7 +26,9 @@
 
     <div>
       <span class="heading">Flights</span>
-      <span style="float: right">time</span>
+      <span style="float: right"
+        >{{ currentTime | date : "HH:mm" }} {{ currentTime | date : "z" }}</span
+      >
     </div>
 
     <br />
@@ -37,7 +39,7 @@
       <tbody>
         <tr *ngFor="let item of departures">
           <td>{{ item.movement.scheduledTimeLocal | date : "HH:mm" }}</td>
-          <td>{{ item.number }}</td>
+          <td style="text-align: center">{{ item.number }}</td>
           <td style="text-align: right">{{ item.status }}</td>
         </tr>
       </tbody>
@@ -48,7 +50,7 @@
       <tbody>
         <tr *ngFor="let item of arrivals">
           <td>{{ item.movement.scheduledTimeLocal | date : "HH:mm" }}</td>
-          <td>{{ item.number }}</td>
+          <td style="text-align: center">{{ item.number }}</td>
           <td style="text-align: right">{{ item.status }}</td>
         </tr>
       </tbody>

@@ -1,19 +1,14 @@
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 a {
   text-decoration: none;
   color: #0083fc;
   font-family: "Roboto";
 }
 
-.spacer {
-  flex: 1 1 auto;
-}
-
-#header-font {
+.header {
   font-size: 60px;
+  width: 80%;
+}
+mat-toolbar {
+  justify-content: center;
+  padding: 50px 50px 50px 35px;
 }

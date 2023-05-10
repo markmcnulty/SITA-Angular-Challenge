@@ -12,14 +12,13 @@ import { ShareService } from '../services/share.service';
 import flightInformation from '../../assets/mock-data/departures.json';
 import airportInformation from '../../assets/mock-data/full-airport-information.json';
 
-// import airlineWebsiteInfo from '../../assets/mock-data/airlineWebsiteInfo.json';
-
 @Component({
   selector: 'app-airport-details',
   templateUrl: './airport-details.component.html',
   styleUrls: ['./airport-details.component.css'],
 })
 export class AirportDetailsComponent implements OnInit {
+  currentTime: Date = new Date();
   departures = flightInformation.departures;
   arrivals = flightInformation.arrivals;
   dummyAirportInformation = airportInformation;
@@ -31,7 +30,9 @@ export class AirportDetailsComponent implements OnInit {
     private airportService: AirportService,
     public shareService: ShareService
   ) {
-    console.log(shareService.sharedIataCode);
+    setInterval(() => {
+      this.currentTime = new Date();
+    }, 1000);
   }
 
   ngOnInit(): void {
