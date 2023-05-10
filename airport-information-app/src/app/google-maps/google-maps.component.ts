@@ -19,7 +19,7 @@ export class GoogleMapsComponent implements OnInit {
       (dd: any) => dd.iata === this.shareService.sharedIataCode
     );
 
-    // Passing the latitude and longtitude of the airport selected on the landing page
+    // Passing the latitude and longtitude of the airport selected on the search page
     if (this.dummyData) {
       this.latitude = this.dummyData.location.lat;
       this.longitude = this.dummyData.location.lon;

@@ -22,7 +22,7 @@ import { NgModule } from '@angular/core';
 import { AirportDetailsComponent } from './airport-details/airport-details.component';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AirportSearchComponent } from './airport-search/airport-search.component';
 
 import { AirportService } from './services/airport.service';
 import { ShareService } from './services/share.service';
@@ -37,7 +37,7 @@ import { SafePipe } from 'src/safe.pipe';
     AirportDetailsComponent,
     AppComponent,
     HeaderComponent,
-    LandingPageComponent,
+    AirportSearchComponent,
     GoogleMapsComponent,
     FlightsComponent,
     LoadingSvgComponent,

@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AirportSearchComponent } from './airport-search/airport-search.component';
 import { AirportDetailsComponent } from './airport-details/airport-details.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: AirportSearchComponent },
   { path: 'airport', component: AirportDetailsComponent },
 
-  { path: '**', redirectTo: 'landing', pathMatch: 'full' },
-
-  // { path: './', redirectTo: '', pathMatch: 'full' }, // Catch-all wildcard route
+  { path: '**', redirectTo: 'search', pathMatch: 'full' },
 ];
 
 @NgModule({

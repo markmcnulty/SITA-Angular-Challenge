@@ -36,7 +36,7 @@ export class AirportDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Here I was getting the iataCode passed by the landing component and rendering data
+    // Here I was getting the iataCode passed by the search component and rendering data
     // Due to limited API access I made an alternative to use static dummy code
 
     // this.airportService

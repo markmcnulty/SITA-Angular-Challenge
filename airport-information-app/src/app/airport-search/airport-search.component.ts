@@ -16,11 +16,11 @@ import { ShareService } from '../services/share.service';
 import airportInformation from '../../assets/mock-data/full-airport-information.json';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css'],
+  selector: 'app-airport-search',
+  templateUrl: './airport-search.component.html',
+  styleUrls: ['./airport-search.component.css'],
 })
-export class LandingPageComponent implements AfterViewInit {
+export class AirportSearchComponent implements AfterViewInit {
   @ViewChild('svgMap') private svgMap!: ElementRef;
   @ViewChild('airport') private airport!: ElementRef;
 
