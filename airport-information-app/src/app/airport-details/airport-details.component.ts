@@ -1,11 +1,4 @@
-import {
-  OnInit,
-  ElementRef,
-  Component,
-  ViewChild,
-  EventEmitter,
-  Output,
-} from '@angular/core';
+import { OnInit, Component } from '@angular/core';
 
 import { AirportService } from '../services/airport.service';
 import { ShareService } from '../services/share.service';

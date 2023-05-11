@@ -4,14 +4,17 @@
 
 <div id="center-items">
   <mat-form-field class="container-width">
-    <mat-label>Search for any airport...</mat-label>
+    <mat-label>Search for any airport by IATA or IACO...</mat-label>
     <input
       height="60px"
       width="1473px"
       type="text"
       matInput
+      maxlength="4"
+      required
       [(ngModel)]="searchTerm"
       (input)="onInputChange()"
+      (input)="searchTerm = searchTerm.toUpperCase()"
     />
     <mat-icon matPrefix>search</mat-icon>
   </mat-form-field>
@@ -19,8 +22,7 @@
 
 <app-loading-svg *ngIf="isLoading"></app-loading-svg>
 
-<div *ngIf="!isLoading">
-  <!-- Your main content that will be displayed after the loading SVG -->
+<div *ngIf="!isLoading && airportInformation.length > 0">
   <hr class="container-width" *ngIf="airportInformation.length > 0" />
   <div>
     <p
@@ -31,10 +33,7 @@
     </p>
   </div>
 
-  <table id="customers" class="container-width container-margins">
-    <!-- *ngFor="let airport of airportInfo" -->
-    <!-- fullAirportInfo is dummy data and airportInformation is real time data -->
-
+  <table id="airports" class="container-width container-margins">
     <tr
       *ngFor="let airport of airportInformation"
       routerLink="/airport"
@@ -47,6 +46,15 @@
       </td>
     </tr>
   </table>
+</div>
+
+<div *ngIf="!isLoading && airportInformation.length == 0 && midSearch">
+  <hr class="container-width" />
+  <div>
+    <p class="container-width container-margins">
+      Sorry, we couldn't find any airports. Try a different IATA or IACO code.
+    </p>
+  </div>
 </div>
 
 <!-- USE BELOW  FOR DUMMY DATA-->
@@ -83,7 +91,7 @@
     </p>
   </div>
 
-  <table id="customers" class="container-width container-margins">
+  <table id="airports" class="container-width container-margins">
    
 
     <tr

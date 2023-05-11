@@ -32,6 +32,7 @@ export class AirportSearchComponent implements AfterViewInit {
   searchTerm: string = '';
 
   isLoading: boolean = false;
+  midSearch: boolean = false;
   // retreivedItems: boolean = false;
 
   dummyAirportInformation = airportInformation;
@@ -58,16 +59,18 @@ export class AirportSearchComponent implements AfterViewInit {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-      // this.retreivedItems = true;
-      // Place the code you want to execute after 2 seconds here or call a function
       this.highlightCountry();
     }, 2000);
   }
 
   // Capturing the data from the user input and getting back sufficent airport data
   onInputChange(): void {
-    if (this.searchTerm.length >= 3) {
-      // this.initSvgMap();
+    if (this.searchTerm.length == 0) {
+      this.midSearch = false;
+      this.removeHighlights();
+    } else if (this.searchTerm.length >= 3) {
+      this.midSearch = true;
+      this.removeHighlights();
       this.displayAirports(this.searchTerm);
     }
   }
@@ -83,13 +86,20 @@ export class AirportSearchComponent implements AfterViewInit {
   }
 
   // highlight countries shown on the dropdown search list
-  // TODO - remove country color styling when user clears the search.
   highlightCountry() {
     const color = '#0083fc';
     const svg = d3.select(this.svgMap.nativeElement);
 
-    this.airportInformation.forEach((element) => {
-      svg.select(`#${element.countryCode}`).style('fill', color);
+    this.airportInformation.forEach((airport) => {
+      svg.select(`#${airport.countryCode}`).style('fill', color);
+    });
+  }
+
+  removeHighlights() {
+    const svg = d3.select(this.svgMap.nativeElement);
+
+    this.airportInformation.forEach((airport) => {
+      svg.select(`#${airport.countryCode}`).style('fill', null);
     });
   }
 
@@ -101,9 +111,6 @@ export class AirportSearchComponent implements AfterViewInit {
       });
   }
 
-  // Passing this data to view 2 so that the map will load depending on the iata code
-  // I was using this iata code to determine the full view 2 layout
-  // I was capturing the iata code depending on which airport the user clicked from the search results
   viewAirport(iataCode: string) {
     this.shareService.iataCode = iataCode;
   }
