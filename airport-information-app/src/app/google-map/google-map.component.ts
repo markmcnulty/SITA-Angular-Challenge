@@ -42,7 +42,10 @@ export class GoogleMapComponent implements OnInit {
     const mapContainer = document.getElementById('map') as HTMLElement;
     const map = new google.maps.Map(mapContainer, mapOptions);
     const marker = new google.maps.Marker({
-      position: new google.maps.LatLng(this.latitude, this.longitude),
+      position: new google.maps.LatLng(
+        this.airportInformation.location.lat,
+        this.airportInformation.location.lon
+      ),
       map: map,
     });
   }
