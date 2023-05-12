@@ -30,6 +30,7 @@ import { ShareService } from './services/share.service';
 import { FlightsComponent } from './flights/flights.component';
 import { LoadingSvgComponent } from './loading-svg/loading-svg.component';
 import { SafePipe } from 'src/safe.pipe';
+import { GoogleMapComponent } from './google-map/google-map.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SafePipe } from 'src/safe.pipe';
     FlightsComponent,
     LoadingSvgComponent,
     SafePipe,
+    GoogleMapComponent,
   ],
   imports: [
     AppRoutingModule,

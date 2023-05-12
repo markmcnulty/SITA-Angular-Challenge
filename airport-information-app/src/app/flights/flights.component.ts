@@ -23,7 +23,7 @@ export class FlightsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('Mush 11', this.flights);
+    console.log(this.flights);
 
     // this.airportService
     //   .getAirportDeparturesAndArrivals('DUB')
