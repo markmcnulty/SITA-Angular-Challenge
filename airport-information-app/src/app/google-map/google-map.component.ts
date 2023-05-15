@@ -10,10 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 export class GoogleMapComponent implements OnInit {
   airportInformation: any;
 
-  //defaulting to dublin
+  //defaulting to dublin coordinates
   latitude: number = 53.4213;
   longitude: number = -6.27007;
 
+  /**
+   * Refactored the code to remove the API call here and use the data sent via the data resolver
+   */
   constructor(
     public shareService: ShareService,
     private route: ActivatedRoute
@@ -25,6 +28,9 @@ export class GoogleMapComponent implements OnInit {
     this.loadMap();
   }
 
+  /**
+   * Passing the lon and lat  so that the marker is pointed in each of the airport coordinates
+   */
   loadMap() {
     const mapOptions = {
       center: new google.maps.LatLng(

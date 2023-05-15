@@ -11,7 +11,7 @@ export class DataResolver implements Resolve<any> {
     private shareService: ShareService
   ) {}
 
-  resolve(): Observable<any> | Promise<any> | any {
+  resolve(): any {
     return this.airportService.getAirportInformationByIATA(
       this.shareService.iataCode
     );

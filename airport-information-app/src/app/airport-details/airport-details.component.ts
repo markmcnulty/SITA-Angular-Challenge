@@ -21,9 +21,7 @@ export class AirportDetailsComponent {
     public shareService: ShareService,
     private route: ActivatedRoute
   ) {
-    this.route.data.subscribe((data) => {
-      this.airportInformation = data;
-    });
+    this.airportInformation = this.route.snapshot.data['resolvedData'];
 
     /*
      * Setting this interval so the time updates in the UI

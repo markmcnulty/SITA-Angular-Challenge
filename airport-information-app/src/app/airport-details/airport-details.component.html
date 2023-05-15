@@ -5,26 +5,26 @@
   </div>
   <div class="item2">
     <div>
-      <span class="title">{{ airportInformation.resolvedData.iata }}</span>
+      <span class="title">{{ airportInformation.iata }}</span>
       <a
         class="website"
         style="float: right"
-        [href]="airportInformation.resolvedData.urls.webSite"
+        [href]="airportInformation.urls.webSite"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {{ airportInformation.resolvedData.shortName }} airport.com
+        {{ airportInformation.shortName }} airport.com
       </a>
     </div>
     <span class="header-data"
-      >{{ airportInformation.resolvedData.municipalityName }} Airport</span
+      >{{ airportInformation.municipalityName }} Airport</span
     >
     <span class="header-data"
-      >Country, {{ airportInformation.resolvedData.country.name }}</span
+      >Country, {{ airportInformation.country.name }}</span
     >
     <span class="header-data">
-      {{ airportInformation.resolvedData.location.lon }},
-      {{ airportInformation.resolvedData.location.lat }}
+      {{ airportInformation.location.lon }},
+      {{ airportInformation.location.lat }}
     </span>
 
     <hr />
