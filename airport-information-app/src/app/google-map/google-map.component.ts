@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AirportService } from '../services/airport.service';
 import { ShareService } from '../services/share.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-google-map',
@@ -15,19 +15,14 @@ export class GoogleMapComponent implements OnInit {
   longitude: number = -6.27007;
 
   constructor(
-    private airportService: AirportService,
-    public shareService: ShareService
-  ) {}
+    public shareService: ShareService,
+    private route: ActivatedRoute
+  ) {
+    this.airportInformation = this.route.snapshot.data['resolvedData'];
+  }
 
-  async ngOnInit(): Promise<void> {
-    try {
-      this.airportInformation = await this.airportService
-        .getAirportInformationByIATA(this.shareService.iataCode)
-        .toPromise();
-      this.loadMap();
-    } catch (error) {
-      console.error('Error retrieving airport information:', error);
-    }
+  ngOnInit(): void {
+    this.loadMap();
   }
 
   loadMap() {

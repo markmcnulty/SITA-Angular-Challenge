@@ -10,7 +10,7 @@ const routes: Routes = [
     path: 'airport',
     component: AirportDetailsComponent,
     resolve: {
-      data: DataResolver,
+      resolvedData: DataResolver,
     },
   },
 

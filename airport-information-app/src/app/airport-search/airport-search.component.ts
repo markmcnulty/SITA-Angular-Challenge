@@ -1,11 +1,4 @@
-import {
-  AfterViewInit,
-  ElementRef,
-  Component,
-  ViewChild,
-  EventEmitter,
-  Output,
-} from '@angular/core';
+import { AfterViewInit, ElementRef, Component, ViewChild } from '@angular/core';
 
 import { AirportInformation } from '../models/airport-information.model';
 
@@ -22,9 +15,6 @@ import airportInformation from '../../assets/mock-data/full-airport-information.
 })
 export class AirportSearchComponent implements AfterViewInit {
   @ViewChild('svgMap') private svgMap!: ElementRef;
-  @ViewChild('airport') private airport!: ElementRef;
-
-  @Output() childToParent = new EventEmitter<String>();
 
   airportInformation: AirportInformation[] = [];
   flights: any[] = [];
@@ -33,7 +23,6 @@ export class AirportSearchComponent implements AfterViewInit {
 
   isLoading: boolean = false;
   midSearch: boolean = false;
-  // retreivedItems: boolean = false;
 
   dummyAirportInformation = airportInformation;
 
@@ -42,20 +31,32 @@ export class AirportSearchComponent implements AfterViewInit {
     private shareService: ShareService
   ) {}
 
+  /*
+   * This lifecycle hook is called after a components view has been initialized
+   * Meaning that all the child views and directives are rendered to the DOM
+   */
   ngAfterViewInit() {
     this.initSvgMap();
   }
 
+  /*
+   * Initialize the map
+   * D3 (Data-Driven Documents) is a powerful JavaScript library for visualizing data and creating dynamic, interactive graphics on the web
+   */
   initSvgMap() {
     const svg = d3.select(this.svgMap.nativeElement);
-
     // Loading SVG file
     d3.xml('assets/world.svg').then((data) => {
       svg.html(() => data.documentElement.outerHTML);
     });
   }
 
-  showLoadingSvg() {
+  /*
+   * Show the loading GIF after user enters search and set the timeout to 2 seconds
+   * Once the loading is complete, highlight the countries in the airportInformation [].
+   *
+   */
+  showLoadingSvg(): void {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
@@ -63,7 +64,10 @@ export class AirportSearchComponent implements AfterViewInit {
     }, 2000);
   }
 
-  // Capturing the data from the user input and getting back sufficent airport data
+  /*
+   * Capturing the search query from the user input using [(ngModel)]
+   * Then passing the query to the displayAirports() function
+   */
   onInputChange(): void {
     if (this.searchTerm.length == 0) {
       this.midSearch = false;
@@ -75,9 +79,11 @@ export class AirportSearchComponent implements AfterViewInit {
     }
   }
 
-  //Get airport information and display it
-  // Comment out as using dummy departure data moving forward
-  displayAirports(query: string) {
+  /*
+   * Call the airportService which fetches the data from the rapidApi endpoint
+   * Call the loading GIF while it fetches the data
+   */
+  displayAirports(query: string): void {
     this.airportService.getAirportInformation(query).subscribe((data) => {
       this.showLoadingSvg();
 
@@ -85,8 +91,11 @@ export class AirportSearchComponent implements AfterViewInit {
     });
   }
 
-  // highlight countries shown on the dropdown search list
-  highlightCountry() {
+  /*
+   * highlight countries shown on the dropdown search list with the requested color
+   * using forEach loop
+   */
+  highlightCountry(): void {
     const color = '#0083fc';
     const svg = d3.select(this.svgMap.nativeElement);
 
@@ -95,7 +104,11 @@ export class AirportSearchComponent implements AfterViewInit {
     });
   }
 
-  removeHighlights() {
+  /*
+   * Doing the opposite here to the highlightCountry function
+   * Setting the fill color to null
+   */
+  removeHighlights(): void {
     const svg = d3.select(this.svgMap.nativeElement);
 
     this.airportInformation.forEach((airport) => {
@@ -103,14 +116,9 @@ export class AirportSearchComponent implements AfterViewInit {
     });
   }
 
-  getAirportSelectedData() {
-    return this.airportService
-      .getAirportInformationByIATA(this.shareService.iataCode)
-      .subscribe((data) => {
-        return data;
-      });
-  }
-
+  /*
+   * Added a service to share the selected data around the components that would require to use the selected IATA code
+   */
   viewAirport(iataCode: string) {
     this.shareService.iataCode = iataCode;
   }

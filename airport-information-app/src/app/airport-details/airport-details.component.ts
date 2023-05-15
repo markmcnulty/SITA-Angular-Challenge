@@ -25,6 +25,9 @@ export class AirportDetailsComponent {
       this.airportInformation = data;
     });
 
+    /*
+     * Setting this interval so the time updates in the UI
+     */
     setInterval(() => {
       this.currentTime = new Date();
     }, 1000);

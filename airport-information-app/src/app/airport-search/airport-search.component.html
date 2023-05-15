@@ -1,7 +1,11 @@
+<!-- loading in the interactive world map -->
 <div id="center-items">
   <svg #svgMap width="1109" height="731"></svg>
 </div>
 
+<!-- Adding the search field and setting the max length to 4 items for both IACO and IATA codes
+Checking after every keystroke
+Sending the search term to uppercase as that's the way the data is getting received from the API. -->
 <div id="center-items">
   <mat-form-field class="container-width">
     <mat-label>Search for any airport by IATA or IACO...</mat-label>
@@ -20,8 +24,10 @@
   </mat-form-field>
 </div>
 
+<!-- Showing the loading asset -->
 <app-loading-svg *ngIf="isLoading"></app-loading-svg>
 
+<!-- Ensuring the loading timeout is finished and the search has results before trying to display the contents -->
 <div *ngIf="!isLoading && airportInformation.length > 0">
   <hr class="container-width" *ngIf="airportInformation.length > 0" />
   <div>
@@ -33,6 +39,8 @@
     </p>
   </div>
 
+  <!-- Adding a click listener here which captures the IATA code and sends it to the share service
+Also the routerlink will take the user to the airport details component -->
   <table id="airports" class="container-width container-margins">
     <tr
       *ngFor="let airport of airportInformation"
@@ -48,6 +56,7 @@
   </table>
 </div>
 
+<!-- Ensuring the loading timeout is finished and the search has ZERO results before trying to display the contents -->
 <div *ngIf="!isLoading && airportInformation.length == 0 && midSearch">
   <hr class="container-width" />
   <div>
